@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Varela+Round")
+@import "yeticss"
+@import "axis"
+normalize()
+
+//- Overrides
+.grid-flex-container
+  margin: 0 auto
+
+//- Colors
+$blue           = #6dbfe2
+$brown          = #272625
+$gray           = #edeae6
+$green          = #4db06d
+$orange         = #ea7317
+$pink           = #c7167f
+$yellow         = #fec601
+
+//- Fonts
+$serif          = 'Libre Baskerville', serif
+$sans-serif     = 'Varela Round', sans-serif
+.serif
+  font-family: 'Libre Baskerville', serif
+.sans-serif
+  font-family: 'Varela Round', sans-serif
+
+
+//- Buttons
+.button
+  background-color: $blue
+  font-family: $sans-serif
+
+
+
+//- Type
+body
+  font-family: 'Libre Baskerville', serif
+h1,h2,h3,h4,h5,h6
+  font-family: 'Varela Round', sans-serif
+
+
+
+
+
+
+//- Navigation
+nav
+  height: 60px
+  text-align: right
+  text-transform: uppercase
+  a
+    color: $white
+    font-family: $sans-serif
+    font-size: rem(24px)
+    line-height: 60px
+    
+
+
+
+
+
+
+
+
+//- home page
+
+.Home
+  background-color: $yellow
+  height: 100vh
+  text-align: center
+
+.tagline
+  color: $white
+  font-family: 'Varela Round', sans-serif
+  font-size: rem(14px)
+  margin: -40px 0 0
+
+.Brand-name
+  color: $brown
+  font-family: 'Libre Baskerville'
+  
+  span
+    display: block
+
+  &__first
+    font-size: rem(98px)
+    font-weight: normal
+    letter-spacing: -11.61px
+    margin: 0px 0 -20px 0
+  &__second
+    font-size: rem(40px)
+    letter-spacing: -2.41px
+    line-height: 45px
+    margin: 0
+
+.Title
+  margin-top: -20px
+  
+
+
+
+
+
+
+//- Homepage Work
+.Portfolio
+  p
+    line-height: 2
+  
+  &--image
+    display: flex
+    align-items: center
+  
+  //-------------------------------- blue
+  &__blue
+    h3
+      color: $blue
+    .Portfolio--image
+      background-color: $blue
+
+      
+
+  //-------------------------------- pink
+  &__pink
+    h3
+      color: $pink    
+    .Portfolio--image
+      background-color: $pink
+
+
+
+  //-------------------------------- orange
+  &__orange
+    h3
+      color: $orange    
+    .Portfolio--image
+      background-color: $orange
+
+
+
+  //-------------------------------- green
+  &__green
+    h3
+      color: $green    
+    .Portfolio--image
+      background-color: $green
