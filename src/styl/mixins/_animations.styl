@@ -1,0 +1,279 @@
+// Animations
+// Example Usage .animation(1s);
+animate(duration = 1s)
+  animation-duration: duration
+  animation-fill-mode: both
+
+
+
+// Animation Delay
+// Example Usage .animation-delay(1s)
+animate-delay(delay = 1s)
+  animation-delay: delay
+
+
+
+// CSS Transitions
+// Example Usage .transition(0.3s)
+transition(prop= all, speed = 0.3s)
+  transition: prop speed
+
+
+
+// Transition Delay
+// Example usage .transition-delay(.3s)
+transition-delay(speed = 0.3s)
+  transition-delay: speed
+
+
+// Animations
+// .animate class needed for _animations.styl to work
+// .delay-* clasees are helpers
+
+.animate
+  animate(1s)
+.animate-infinite
+  -webkit-animation-iteration-count: infinite
+  animation-iteration-count: infinite
+.delay-1
+  animate-delay(0.5s)
+.delay-2
+  animate-delay(0.8s)
+.delay-3
+  animate-delay(1s)
+
+
+
+//
+// ANIMATIONS
+// ===========
+// Animation based on Animate.css by Daniel Eden.
+// http://daneden.github.io/animate.css/
+//
+// More can be created using the above code base. These are 
+// the bare minimum for interaction without fluff.
+//
+
+
+
+
+// .fade-in
+
+@keyframes fadeIn
+  0%
+    opacity(0)
+  100%
+    opacity(1)
+.fade-in
+  animation-name: fadeIn
+
+
+
+// .fade-in-down
+
+@keyframes fadeInDown
+  0%
+    opacity(0)
+    transform: translate3d(0, -30px, 0)
+  100%
+    opacity(1)
+    -webkit-transform: none
+    transform: none
+.fade-in-down
+  animation-name: fadeInDown
+
+
+
+// .fade-in-down-big
+
+@keyframes fadeInDownBig
+  0%
+    opacity(0)
+    transform: translate3d(0, -100%, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-down-big
+  animation-name: fadeInDownBig
+
+
+
+// .fade-in-left
+
+@keyframes fadeInLeft
+  0%
+    opacity(0)
+    transform: translate3d(-30px, 0, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-left
+  animation-name: fadeInLeft
+
+
+
+// .fade-in-left-big
+
+@keyframes fadeInLeftBig
+  0%
+    opacity(0)
+    transform: translate3d(-100%, 0, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-left-big
+  animation-name: fadeInLeftBig
+
+
+
+// .fade-in-right
+
+@keyframes fadeInRight
+  0%
+    opacity(0)
+    transform: translate3d(30px, 0, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-right
+  animation-name: fadeInRight
+
+
+
+// .fade-in-right-big
+
+@keyframes fadeInRightBig
+  0%
+    opacity(0)
+    transform: translate3d(100%, 0, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-right-big
+  animation-name: fadeInRightBig
+
+
+
+// .fade-in-up
+
+@keyframes fadeInUp
+  0%
+    opacity(0)
+    transform: translate3d(0, 30px, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-up
+  animation-name: fadeInUp
+
+
+
+// .fade-in-up-big
+
+@keyframes fadeInUpBig
+  0%
+    opacity(0)
+    transform: translate3d(0, 100%, 0)
+  100%
+    opacity(1)
+    transform: none
+.fade-in-up-big
+  animation-name: fadeInUpBig
+
+
+
+// .fade-out-up
+
+@keyframes fadeOutUp
+  0%
+    opacity(1)
+  100%
+    opacity(0)
+    transform: translate3d(0, -30px, 0)
+.fade-out-up
+  animation-name: fadeOutUp
+
+
+
+// .fade-out-left
+
+@keyframes fadeOutLeft
+  0%
+    opacity(1)    
+  100%
+    opacity(0)
+    transform: translate3d(-30px, 0, 0)
+.fade-out-left
+  animation-name: fadeOutLeft
+
+
+
+// .fade-out-left-big
+
+@keyframes fadeOutLeftBig
+  0%
+    opacity(1)
+  100%
+    opacity(0)
+    transform: translate3d(-100%, 0, 0)
+.fade-out-left-big
+  animation-name: fadeOutLeftBig
+
+
+
+// .expand
+
+@keyframes expand
+  0%
+    flex: 0 0 50%
+  100%
+    flex: 0 0 100%
+.expand
+  animation-name: expand
+
+
+
+
+
+// .preloader
+
+.preloader
+  width:30px
+  height:30px
+  background:$blue
+  border-radius:50px
+  animation: preloader 1.5s infinite linear
+
+.preloader:after
+  position:absolute
+  width:50px
+  height:50px
+  border-top:10px solid $gray
+  border-bottom:10px solid $gray
+  border-left:10px solid transparent
+  border-right:10px solid transparent
+  border-radius:50px
+  content:''
+  top:-20px
+  left:-20px
+  animation: preloader_after 1.5s infinite linear
+
+@keyframes preloader
+  0% 
+    transform: rotate(0deg)
+  50% 
+    transform: rotate(180deg)
+    background: $yellow
+  100% 
+    transform: rotate(360deg)
+
+@keyframes preloader_after 
+  0% 
+    border-top:10px solid $gray
+    border-bottom:10px solid $gray
+  50% 
+    border-top:10px solid $blue
+    border-bottom:10px solid $blue
+  100% 
+    border-top:10px solid $gray
+    border-bottom:10px solid $gray

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Varela+Round")
 @import "yeticss"
 @import "axis"
+@import "./mixins/_animations"
 normalize()
 
 //- Overrides
@@ -45,15 +46,25 @@ h1,h2,h3,h4,h5,h6
 
 //- Navigation
 nav
-  height: 60px
-  text-align: right
+  background: $red url('../img/menubg.png') 0 0 no-repeat
+  box-shadow: 0px -1px 14px rgba(0,0,0,0.3)
+  height: 280px
+  padding-top: 130px
+  position: fixed
+  right: 6em
+  text-align: center
   text-transform: uppercase
+  top: 0
+  width: 180px
   a
     color: $white
+    display: block
     font-family: $sans-serif
-    font-size: rem(24px)
-    line-height: 60px
-    
+    font-size: rem(18px)
+    padding: 10px
+
+    &:hover
+      color: rgba($brown, 0.75)
 
 
 
@@ -73,7 +84,7 @@ nav
   color: $white
   font-family: 'Varela Round', sans-serif
   font-size: rem(14px)
-  margin: -40px 0 0
+  padding: 15px 0 0
 
 .Brand-name
   color: $brown
@@ -94,6 +105,7 @@ nav
     margin: 0
 
 .Title
+  color: rgba($brown, 0.75)
   margin-top: -20px
   
 
@@ -104,12 +116,16 @@ nav
 
 //- Homepage Work
 .Portfolio
+  min-height: 600px
   p
     line-height: 2
   
-  &--image
-    display: flex
-    align-items: center
+  > .grid-flex-cell
+      display: flex
+      align-items: center
+  // &--image
+  //   display: flex
+  //   align-items: center
   
   //-------------------------------- blue
   &__blue
