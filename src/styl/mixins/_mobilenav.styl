@@ -1,0 +1,115 @@
+
+.Stackednav__button
+  background-color: transparent
+  border: none
+  outline: none
+  padding: 2px
+  position: fixed
+  right: 5%
+  top: 2.5%
+  z-index: 200
+
+.Stackednav__trigger
+  height: 50px
+  width: 50px
+  position: relative
+  margin:auto
+  border:5px solid transparent
+  border-radius(100%)
+  transition(ease .3s)
+  cursor: pointer
+  
+  span
+    color: $white
+    float: right
+    font-size: rem(10px)
+    text-align: center
+
+    
+
+.Stackednav__bar
+  height: 3px
+  display: block
+  margin: 10px auto
+  position: relative
+  background-color: $brown
+  border-radius(10px)
+  transition(ease .4s)
+  width: 100%
+
+
+
+.is-active
+  .Stackednav__button
+    .Stackednav__trigger
+      .Stackednav__bar
+        background-color: $white
+        &:nth-of-type(1)
+          transform: translateY(10px) rotate(45deg)
+        &:nth-of-type(2)
+          opacity: 0
+        &:nth-of-type(3)
+          transform: translateY(-16px) rotate(-45deg)
+
+
+
+
+/*============= Demo  Animation  ================*/
+
+@keyframes mrotr
+  0%
+    transform(translateY(0px) rotate(0))
+  50%
+    transform(translateY(15px) rotate(0))
+  100%
+    transform(translateY(15px) rotate(45deg))
+
+@keyframes mrotl
+  0%
+    transform(translateY(0px) rotate(0))
+  50%
+    transform(translateY(-15px) rotate(0))
+  100%
+    transform(translateY(-15px) rotate(-45deg))
+
+
+@keyframes rotateR
+  from
+    transform(translateY(0px) rotate(0))
+  to
+    transform(translateY(15px) rotate(45deg))
+
+@keyframes rotateL
+  from
+    transform(translateY(0px) rotate(0))
+  to
+    transform(translateY(-15px) rotate(-45deg))
+
+@keyframes circle-creation
+   0%
+     border-color: transparent; rotate(0deg)
+   25%
+     border-color: transparent $red transparent transparent
+     rotate(-35deg);
+   50%
+     border-color: transparent $red  $red transparent
+   75%
+     border-color: transparent $red $red $red
+   100%
+     border-color: $red
+     rotate(-300deg)
+   
+
+
+@keyframes moveUp
+  from
+    translateY(0)
+  to
+    translateY(25px)
+
+
+@keyframes fade
+  from
+    opacity: 1
+  to
+    opacity: 0

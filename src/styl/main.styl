@@ -1,14 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Varela+Round")
 @import "yeticss"
 @import "axis"
-@import "./mixins/_animations"
-normalize()
 
-//- Overrides
-.grid-flex-container
-  margin: 0 auto
-
-//- Colors
+//- Variables
 $blue           = #6dbfe2
 $brown          = #272625
 $gray           = #edeae6
@@ -20,10 +14,11 @@ $yellow         = #fec601
 //- Fonts
 $serif          = 'Libre Baskerville', serif
 $sans-serif     = 'Varela Round', sans-serif
-.serif
-  font-family: 'Libre Baskerville', serif
-.sans-serif
-  font-family: 'Varela Round', sans-serif
+
+@import "./mixins/_animations"
+@import "./mixins/_mobilenav"
+normalize()
+
 
 
 //- Buttons
@@ -41,21 +36,36 @@ h1,h2,h3,h4,h5,h6
 
 
 
+//- Helpers
+.grid-flex-container
+  margin: 0 auto
+
+.serif
+  font-family: 'Libre Baskerville', serif
+.sans-serif
+  font-family: 'Varela Round', sans-serif
+
+.hide-desktop
+  display: block
+  +above($breakpoint-tablet)
+    display: none
 
 
 
 //- Navigation
 nav
   background: $red url('../img/menubg.png') 0 0 no-repeat
-  box-shadow: 0px -1px 14px rgba(0,0,0,0.3)
-  height: 280px
-  padding-top: 130px
+  background-size: cover
+  height: 100vh
   position: fixed
-  right: 6em
-  text-align: center
-  text-transform: uppercase
-  top: 0
-  width: 180px
+  right: 200%
+  z-index: 100
+  transition()
+  background-color: rgba($brown, 0.85)
+  padding-top: 300px
+  position: fixed
+  width: 100%
+  
   a
     color: $white
     display: block
@@ -63,8 +73,28 @@ nav
     font-size: rem(18px)
     padding: 10px
 
-    &:hover
-      color: rgba($brown, 0.75)
+.is-active
+  nav
+    right: 0%
+
+
+
+
+
++above($breakpoint-tablet)
+  nav
+    box-shadow: 0px -1px 14px rgba(0,0,0,0.3)
+    height: 280px
+    padding-top: 130px
+    position: fixed
+    right: 6em !important
+    text-align: center
+    text-transform: uppercase
+    top: 0
+    width: 180px
+    a
+      &:hover
+        color: rgba($brown, 0.75)
 
 
 
@@ -77,8 +107,10 @@ nav
 
 .Home
   background-color: $yellow
-  height: 100vh
   text-align: center
+  height: 100%
+  +above($breakpoint-mid-mobile)
+    height: 100vh
 
 .tagline
   color: $white
@@ -94,19 +126,30 @@ nav
     display: block
 
   &__first
-    font-size: rem(98px)
-    font-weight: normal
-    letter-spacing: -11.61px
+    font-size: rem(68px)
+    letter-spacing: -6.61px
     margin: 0px 0 -20px 0
   &__second
-    font-size: rem(40px)
+    font-size: rem(30px)
     letter-spacing: -2.41px
-    line-height: 45px
-    margin: 0
+
+  +above($breakpoint-mid-mobile)
+    &__first
+      font-size: rem(98px)
+      font-weight: normal
+      letter-spacing: -11.61px
+    &__second
+      font-size: rem(40px)
+      letter-spacing: -2.41px
+      line-height: 45px
+      margin: 0
 
 .Title
   color: rgba($brown, 0.75)
   margin-top: -20px
+  font-size: rem(20px)
+  +above($breakpoint-mid-mobile)
+    font-size: rem(36px)
   
 
 
@@ -123,40 +166,71 @@ nav
   > .grid-flex-cell
       display: flex
       align-items: center
-  // &--image
-  //   display: flex
-  //   align-items: center
+
+  
+  .Portfolio__image
+    padding-bottom: 1em
+    &--right
+      +above($breakpoint-tablet)
+        order: 2
   
   //-------------------------------- blue
-  &__blue
+  &--blue
     h3
       color: $blue
-    .Portfolio--image
+    .Portfolio__image
       background-color: $blue
+      background-image: url('../img/pajaro.svg')
+      background-position: -10% center
+      background-repeat: repeat-y
+      background-size: 130px 130px
+
+    +below($breakpoint-mid-mobile)
+      border: 15px solid $blue
 
       
 
   //-------------------------------- pink
-  &__pink
+  &--pink
     h3
       color: $pink    
-    .Portfolio--image
+    .Portfolio__image
       background-color: $pink
-
+      background-image: url('../img/pajaro2.svg')
+      background-position: 110% center
+      background-repeat: repeat-y
+      background-size: 130px 130px
+      
+    +below($breakpoint-mid-mobile)
+      border: 15px solid $pink
 
 
   //-------------------------------- orange
-  &__orange
+  &--orange
     h3
       color: $orange    
-    .Portfolio--image
+    .Portfolio__image
       background-color: $orange
+      background-image: url('../img/pajaro3.svg')
+      background-position: -10% center
+      background-repeat: repeat-y
+      background-size: 130px 130px
+    
+    +below($breakpoint-mid-mobile)
+      border: 15px solid $orange
 
 
 
   //-------------------------------- green
-  &__green
+  &--green
     h3
       color: $green    
-    .Portfolio--image
+    .Portfolio__image
       background-color: $green
+      background-image: url('../img/pajaro2.svg')
+      background-position: 110% center
+      background-repeat: repeat-y
+      background-size: 130px 130px
+      
+    +below($breakpoint-mid-mobile)
+      border: 15px solid $green
