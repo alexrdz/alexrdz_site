@@ -1963,7 +1963,7 @@ tr.table-cell-alert a:hover {
   display: block;
   margin: 10px auto;
   position: relative;
-  background-color: #272625;
+  background-color: #5e4a44;
   transition: ease 0.4s 0.3s;
   width: 100%;
 }
@@ -2116,17 +2116,21 @@ nav a {
   margin-top: -20px;
   font-size: 1.25rem;
 }
-.Portfolio {
-  min-height: 600px;
-}
 .Portfolio p {
   line-height: 2;
 }
-.Portfolio > .grid-flex-cell {
-  display: -ms-flexbox;
-  display: flex;
+.Portfolio .grid-flex-container {
   -ms-flex-align: center;
       align-items: center;
+}
+.Portfolio .grid-flex-container .grid-flex-cell {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 600px;
+}
+.Portfolio .grid-flex-container .grid-flex-cell .container {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .Portfolio .Portfolio__image {
   padding-bottom: 1em;
@@ -2189,6 +2193,50 @@ nav a {
   background-repeat: repeat-y;
   background-size: 130px 130px;
 }
+.About {
+  background-image: url("../img/overlay-yellow.png"), url("../img/aboutbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+.About .grid-flex-container {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+.About h2 {
+  color: #fff;
+  line-height: 0.9;
+  width: 250px;
+}
+.About p {
+  color: #fff;
+}
+.About form {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.About form input[type="text"],
+.About form input[type="email"],
+.About form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+:-ms-input-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+::-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+  opacity: 1;
+}
+:-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+  opacity: 1;
+}
 @media only screen and (min-width: 768px) {
   .Portfolio .Portfolio__image--right {
     -ms-flex-order: 2;
@@ -2217,7 +2265,7 @@ nav a {
     width: 180px;
   }
   nav a:hover {
-    color: rgba(39,38,37,0.75);
+    color: rgba(94,74,68,0.75);
   }
   .Home {
     height: 100vh;

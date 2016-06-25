@@ -26,5 +26,22 @@ $(function() {
     ($trigger, $body).toggleClass('is-active'); 
   });
 
+
+
+  // Scroll to About
+  /*----------------------------------------------------------------*/  
+  var aboutnav = $('.about'),
+      target = $('#about');
+
+  aboutnav.on('click', function(event) {
+    event.preventDefault();
+    $('html, body').stop().animate({
+        scrollTop: target.offset().top
+    }, 1000);
+  });
+
+
+
+
   
 });
