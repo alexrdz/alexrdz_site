@@ -10,7 +10,7 @@ html
 
   body
 
-  
+
 
     .Home
       nav
@@ -20,7 +20,7 @@ html
             .Stackednav__bar
             .Stackednav__bar
         a(href="#") Home
-        a(href="#") About
+        a(href="#").about About
         a(href="#") Journal
 
       p.tagline Hecho en Austin, Texas &hearts; Con Puro Pinche Amor
@@ -40,10 +40,11 @@ html
 
 
 
-    .Work
-      .Portfolio.Portfolio--blue.grid-flex-container
+    section.Portfolio
+      .Portfolio--blue.grid-flex-container
         .grid-flex-cell.Portfolio__image.Portfolio__image--right
-          img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
+          .container
+            img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
 
         .grid-flex-cell.Portfolio__text
           .container
@@ -58,9 +59,10 @@ html
 
 
 
-      .Portfolio.Portfolio--pink.grid-flex-container
+      .Portfolio--pink.grid-flex-container
         .grid-flex-cell.Portfolio__image
-          img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
+          .container
+            img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
 
         .grid-flex-cell.Portfolio__text
           .container
@@ -74,9 +76,10 @@ html
 
 
 
-      .Portfolio.Portfolio--orange.grid-flex-container
+      .Portfolio--orange.grid-flex-container
         .grid-flex-cell.Portfolio__image.Portfolio__image--right
-          img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
+          .container
+            img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
 
 
         .grid-flex-cell.Portfolio__text
@@ -95,9 +98,10 @@ html
 
 
 
-      .Portfolio.Portfolio--green.grid-flex-container
+      .Portfolio--green.grid-flex-container
         .grid-flex-cell.Portfolio__image
-          img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
+          .container
+            img(src="img/portfolio/naseemrdz.png", alt="naseemrdz website")
 
         .grid-flex-cell.Portfolio__text
           .container
@@ -108,6 +112,35 @@ html
             p
               a(href="").button view project
 
+
+
+
+    section.About#about
+      .grid-flex-container
+        .grid-flex-cell
+          img(src="img/logo.png", alt="alex rdz skull", width="200px")
+          h2.serif Father &amp; Husband
+          h2.serif Plant-based Cooker
+          h2.serif Front End Developer &amp; UI Designer
+          p in order of importance and ability, i am a dedicated father and husband, cooker of mexican food, and web worker. i design + develop websites for small businesses, artists, nonprofits and other nice people. you can contact me on #[a(href="https://twitter.com/alex___rdz") twitter ] or at #[a(href='ma&#105;l&#116;o&#58;d&#114;inkhorc&#37;6&#56;&#97;ta%40g%6Da%69%6&#67;&#46;c&#111;m') dr&#105;n&#107;ho&#114;chata&#64;gma&#105;l&#46;co&#109;]
+
+          <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        .grid-flex-cell
+          .container
+            form(action="")
+              h2 Contact Me
+              .form-element
+                label(for="name") Name
+                input(type="text" id="name" placeholder="Your name" class="form-input")
+              .form-element
+                label(for="email") Email
+                input(type="text" id="email" placeholder="Your Email" class="form-input")
+              .form-element
+                label(for="comment") Write a comment
+                textarea(id="comment" placeholder="This is a sample message" class="form-input")
+
+              button(type="submit" class="button") Send
+          
 
 
     script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')

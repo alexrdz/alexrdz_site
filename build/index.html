@@ -17,7 +17,7 @@
             <div class="Stackednav__bar"></div>
             <div class="Stackednav__bar"></div>
           </div>
-        </button><a href="#">Home</a><a href="#">About</a><a href="#">Journal</a>
+        </button><a href="#">Home</a><a href="#" class="about">About</a><a href="#">Journal</a>
       </nav>
       <p class="tagline">Hecho en Austin, Texas &hearts; Con Puro Pinche Amor</p>
       <h1 class="Brand-name"><span class="Brand-name__first">alex</span><span class="Brand-name__second">rodr&iacute;guez</span><img src="img/logo.png" alt="alex rdz skull"></h1>
@@ -29,9 +29,11 @@
         
       </h2><img src="img/icon-down-arrow.png" alt="icon arrow pointing downward" class="animate fade-in-down delay-2">
     </div>
-    <div class="Work">
-      <div class="Portfolio Portfolio--blue grid-flex-container">
-        <div class="grid-flex-cell Portfolio__image Portfolio__image--right"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+    <section class="Portfolio">
+      <div class="Portfolio--blue grid-flex-container">
+        <div class="grid-flex-cell Portfolio__image Portfolio__image--right">
+          <div class="container"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+        </div>
         <div class="grid-flex-cell Portfolio__text">
           <div class="container">
             <h3>naseemrdz</h3>
@@ -40,8 +42,10 @@
           </div>
         </div>
       </div>
-      <div class="Portfolio Portfolio--pink grid-flex-container">
-        <div class="grid-flex-cell Portfolio__image"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+      <div class="Portfolio--pink grid-flex-container">
+        <div class="grid-flex-cell Portfolio__image">
+          <div class="container"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+        </div>
         <div class="grid-flex-cell Portfolio__text">
           <div class="container">
             <h3>the grumpy cooker</h3>
@@ -50,8 +54,10 @@
           </div>
         </div>
       </div>
-      <div class="Portfolio Portfolio--orange grid-flex-container">
-        <div class="grid-flex-cell Portfolio__image Portfolio__image--right"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+      <div class="Portfolio--orange grid-flex-container">
+        <div class="grid-flex-cell Portfolio__image Portfolio__image--right">
+          <div class="container"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+        </div>
         <div class="grid-flex-cell Portfolio__text">
           <div class="container">
             <h3>nuestra salud health clinic</h3>
@@ -62,8 +68,10 @@
           </div>
         </div>
       </div>
-      <div class="Portfolio Portfolio--green grid-flex-container">
-        <div class="grid-flex-cell Portfolio__image"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+      <div class="Portfolio--green grid-flex-container">
+        <div class="grid-flex-cell Portfolio__image">
+          <div class="container"><img src="img/portfolio/naseemrdz.png" alt="naseemrdz website"></div>
+        </div>
         <div class="grid-flex-cell Portfolio__text">
           <div class="container">
             <h3>laredo examiners</h3>
@@ -72,7 +80,37 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section id="about" class="About">
+      <div class="grid-flex-container">
+        <div class="grid-flex-cell"><img src="img/logo.png" alt="alex rdz skull" width="200px">
+          <h2 class="serif">Father &amp; Husband</h2>
+          <h2 class="serif">Plant-based Cooker</h2>
+          <h2 class="serif">Front End Developer &amp; UI Designer</h2>
+          <p>in order of importance and ability, i am a dedicated father and husband, cooker of mexican food, and web worker. i design + develop websites for small businesses, artists, nonprofits and other nice people. you can contact me on <a href="https://twitter.com/alex___rdz">twitter </a> or at <a href="ma&amp;#105;l&amp;#116;o&amp;#58;d&amp;#114;inkhorc&amp;#37;6&amp;#56;&amp;#97;ta%40g%6Da%69%6&amp;#67;&amp;#46;c&amp;#111;m">dr&#105;n&#107;ho&#114;chata&#64;gma&#105;l&#46;co&#109;</a></p><a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="grid-flex-cell">
+          <div class="container">
+            <form action="">
+              <h2>Contact Me</h2>
+              <div class="form-element">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" class="form-input">
+              </div>
+              <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Your Email" class="form-input">
+              </div>
+              <div class="form-element">
+                <label for="comment">Write a comment</label>
+                <textarea id="comment" placeholder="This is a sample message" class="form-input"></textarea>
+              </div>
+              <button type="submit" class="button">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>

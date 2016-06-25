@@ -38,7 +38,7 @@ nav
   right: 200%
   z-index: 100
   transition()
-  background-color: rgba($brown, 0.85)
+  background-color: rgba($text, 0.85)
   padding-top: 300px
   position: fixed
   width: 100%
@@ -80,7 +80,7 @@ nav
   padding: 15px 0 0
 
 .Brand-name
-  color: $brown
+  color: $text
   font-family: 'Libre Baskerville'
   
   span
@@ -97,7 +97,7 @@ nav
 
 
 .Title
-  color: rgba($brown, 0.75)
+  color: rgba($text, 0.75)
   margin-top: -20px
   font-size: rem(20px)
 
@@ -110,14 +110,17 @@ nav
 
 //- Homepage Work
 .Portfolio
-  min-height: 600px
+  
   p
     line-height: 2
   
-  > .grid-flex-cell
+  .grid-flex-container
+    align-items: center
+    .grid-flex-cell
       display: flex
-      align-items: center
-
+      min-height: 600px
+      .container
+        align-self: center
   
   .Portfolio__image
     padding-bottom: 1em
@@ -183,3 +186,49 @@ nav
       background-position: 110% center
       background-repeat: repeat-y
       background-size: 130px 130px
+
+
+
+
+
+
+//- About
+.About
+  background-image: url('../img/overlay-yellow.png'), url('../img/aboutbg.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  height: 100vh
+  
+  .grid-flex-container
+    align-items: flex-end
+    
+  
+  h2
+    color: $white
+    line-height: 0.9
+    width: 250px
+  
+  p
+    color: $white
+  
+  form
+    align-self: flex-end
+    input[type="text"],
+    input[type="email"],
+    textarea
+      background-color: transparent
+      border: none
+      border-bottom: 1px solid $white
+
+  
+::-webkit-input-placeholder
+  color: rgba($white, 0.7)
+:-ms-input-placeholder
+  color: rgba($white, 0.7)
+::-moz-placeholder
+  color: rgba($white, 0.7)
+  opacity: 1
+:-moz-placeholder
+  color: rgba($white, 0.7)
+  opacity: 1
