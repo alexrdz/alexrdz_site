@@ -1,6 +1,5 @@
 ### NODE ###
 node_modules
-build
 
 ### OSX ###
 .DS_Store
