@@ -2061,6 +2061,10 @@ h6 {
 .hide-desktop {
   display: block;
 }
+.Stackednav__button {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
 nav {
   background: #d13f19 url("../img/menubg.png") 0 0 no-repeat;
   background-size: cover;
@@ -2126,7 +2130,6 @@ nav a {
 .Portfolio .grid-flex-container .grid-flex-cell {
   display: -ms-flexbox;
   display: flex;
-  min-height: 600px;
 }
 .Portfolio .grid-flex-container .grid-flex-cell .container {
   -ms-flex-item-align: center;
@@ -2198,7 +2201,7 @@ nav a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 .About .grid-flex-container {
   -ms-flex-align: end;
@@ -2237,7 +2240,65 @@ nav a {
   color: rgba(255,255,255,0.7);
   opacity: 1;
 }
+.Hero {
+  min-height: 50vh;
+  text-align: center;
+}
+.Hero--blue {
+  background-color: #6dbfe2;
+}
+.Hero .container {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.Inner-brand {
+  left: 2%;
+  position: absolute;
+  text-align: center;
+  top: 2%;
+  width: 170px;
+}
+.Inner-brand .Brand-name__first {
+  color: #fff;
+  font-size: 120%;
+  letter-spacing: -1px;
+}
+.Inner-brand .Brand-name__second {
+  color: #fff;
+  font-size: 50%;
+  letter-spacing: -1px;
+}
+.is-blue {
+  color: #6dbfe2;
+}
+.is-green {
+  color: #4db06d;
+}
+.is-red {
+  color: #d13f19;
+}
+.is-orange {
+  color: #ea7317;
+}
+.is-yellow {
+  color: #fec601;
+}
+.Content--top {
+  background-color: #5e4a44;
+  color: #fff;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.Content--bottom {
+  background-image: url("../img/contentbottombg.png");
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 @media only screen and (min-width: 768px) {
+  .Portfolio .grid-flex-cell {
+    min-height: 600px;
+  }
   .Portfolio .Portfolio__image--right {
     -ms-flex-order: 2;
         order: 2;
@@ -2247,6 +2308,12 @@ nav a {
   .Portfolio--orange,
   .Portfolio--green {
     border: none;
+  }
+  .About {
+    height: 100vh;
+  }
+  .Portfolio-page .container {
+    width: 70%;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -2283,5 +2350,8 @@ nav a {
   }
   .Title {
     font-size: 2.25rem;
+  }
+  .Portfolio-page .container {
+    width: 60%;
   }
 }

@@ -30,6 +30,11 @@ h1,h2,h3,h4,h5,h6
 
 
 //- Navigation
+.Stackednav__button
+  background-color: rgba($white, 0.3)
+  border-radius: 4px
+
+
 nav
   background: $red url('../img/menubg.png') 0 0 no-repeat
   background-size: cover
@@ -118,7 +123,6 @@ nav
     align-items: center
     .grid-flex-cell
       display: flex
-      min-height: 600px
       .container
         align-self: center
   
@@ -198,7 +202,7 @@ nav
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
-  height: 100vh
+  height: 100%
   
   .grid-flex-container
     align-items: flex-end
@@ -232,3 +236,66 @@ nav
 :-moz-placeholder
   color: rgba($white, 0.7)
   opacity: 1
+
+
+
+
+
+
+//- Hero
+.Hero
+  min-height: 50vh
+  text-align: center
+  &--blue
+    background-color: $blue
+  .container
+    padding-bottom: 5rem
+    padding-top: 5rem
+
+
+
+//- Portfolio Page
+.Inner-brand
+  left: 2%
+  position: absolute
+  text-align: center
+  top: 2%
+  width: 170px
+  .Brand-name
+    &__first
+      color: $white
+      font-size: 120%
+      letter-spacing: -1px
+    &__second
+      color: $white
+      font-size: 50%
+      letter-spacing: -1px
+
+
+//- Headings modifiers
+.is-blue
+  color: $blue
+.is-green
+  color: $green
+.is-red
+  color: $red
+.is-orange
+  color: $orange
+.is-yellow
+  color: $yellow
+
+
+
+
+
+//- Content Top
+.Content--top
+  background-color: $brown
+  color: $white
+  padding-bottom: 2rem
+  padding-top: 2rem
+.Content--bottom
+  background-image: url('../img/contentbottombg.png')
+  background-size: 100%
+  background-position: top center
+  background-repeat: no-repeat
